@@ -1,0 +1,588 @@
+#:kivy 1.0
+
+<MyLabelWithBackground>:
+	canvas.before:
+		Color:			
+			rgb: 1, 0, 0
+		Rectangle:
+			pos: self.pos
+			size: self.size
+
+<MyPopupWithBackground>:
+	canvas:
+		Rectangle:
+			source: 'images/layout/background.jpg'
+			pos: self.pos
+			size: self.size
+			
+<Sisrecmatico>:
+	buttontest: cicyt
+	canvas:
+		Rectangle:
+			source: 'images/layout/background1.png'
+			pos: self.pos
+			size: self.size
+	BoxLayout:
+		orientation: 'horizontal'
+		size: (1024,768)
+		padding: 20
+		spacing: 15
+		
+		Button:
+			id: cti
+			text: ''
+			font_size: 50
+			background_normal: 'images/layout/botonesPrincipales/btnCTI_ON.png'
+			background_down: 'images/layout/botonesPrincipales/btnCTI_DOWN.png'
+			size_hint: (0.8, 0.4)
+			on_release: root.do_cti()
+		
+		Button:
+			id: cicyt
+			text: ''
+			font_size: 50
+			background_normal: 'images/layout/botonesPrincipales/btnCYCIT_ON.png'
+			background_down: 'images/layout/botonesPrincipales/btnCYCIT_DOWN.png'
+			size_hint: (0.8, 0.4)
+			on_release: root.do_cicyt()
+
+<Integrantesui_cti>:
+	lista: gridlayout
+	
+	canvas:
+		Rectangle:
+			source: 'images/layout/background.jpg'
+			pos: self.pos
+			size: self.size
+	
+	
+	BoxLayout:
+		orientation: 'vertical'
+		size: (1024,768)
+		BoxLayout:
+			orientation: 'horizontal'
+			padding: 20
+			spacing: 10
+			size_hint: (1,.1145)
+			
+			canvas:
+				Rectangle:
+					source: 'images/layout/header.png'
+					pos: self.pos
+					size: self.size
+				
+			Label:
+				text: ''				
+				font_size: 20
+				size_hint: (.6, 1)
+			Button:
+				id: info85
+				text: ''
+				font_size: 12
+				background_normal: 'images/layout/atras.png'
+				background_down: 'images/layout/atrasDown.png'
+				size_hint: (None, None)
+				width: 180
+				height: 50
+				on_release:root.do_return()
+			Button:
+				id: info86
+				text: ''
+				font_size: 12
+				background_normal: 'images/layout/info.png'
+				background_down: 'images/layout/infoDown.png'
+				size_hint: (None, None)
+				width: 180
+				height: 50
+				on_release:root.information()
+			
+		GridLayout:
+			id: gridlayout
+            cols: 4
+            spacing: 6
+            padding: 10
+            size_hint: (1,.8855)
+			
+			Button:
+				id: int1
+#				text: 'Enrique Pelaez\nDirector CTI'
+				background_normal: 'images/layout/botonesIntegrantes/btn_epelaez.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_epelaezDown.png'
+				font_size: 12
+				size_hint: (None,None)
+				height:77
+				width:245
+				on_release: root.do_info(1)
+			Button:
+				id: int1
+#				text: 'Katherine Chiluiza\nCoordinador Líder de Programa'
+				background_normal: 'images/layout/botonesIntegrantes/btn_kchiluiza.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_kchiluizaDown.png'
+				font_size: 12
+				size_hint: (None,None)
+				height:77
+				width:245
+				on_release: root.do_info(18)
+		
+			
+			Button:
+				id: int2
+		#		text: 'Xavier Ochoa'
+				background_normal: 'images/layout/botonesIntegrantes/btn_xochoa.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_xochoaDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:245
+				on_release: root.do_info(6)
+			
+			Button:
+				id: int3
+	#			text: 'Sixto Garcia'
+				background_normal: 'images/layout/botonesIntegrantes/btn_sgarcia.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_sgarcia.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:245
+				on_release: root.do_info(11)
+			
+			Button:
+				id: int4
+			#	text: 'Mafer Vargas Secretaria'
+				background_normal: 'images/layout/botonesIntegrantes/btn_mvargas.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_mvargasDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:245
+				on_release: root.do_info(2)
+		
+			Button:
+				id: int5
+		#		text: 'Yadira Andrade Asistente'
+				background_normal: 'images/layout/botonesIntegrantes/btn_yandrade.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_yandradeDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(3)
+			Button:
+				id: int6
+	#			text: 'Pedro Ortiz Administrador del Edificio'
+				background_normal: 'images/layout/botonesIntegrantes/btn_portiz.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_portizDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(19)
+			Button:
+				id: int25
+		#		text: 'Gerald Jiménez'
+				background_normal: 'images/layout/botonesIntegrantes/btn_gjimenez.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_gjimenezDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(27)
+
+			Button:
+				id: int7
+		#		text: 'Paulina Arevalo Disenadora'
+				background_normal: 'images/layout/botonesIntegrantes/btn_parevalo.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_parevaloDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(5)
+
+			Button:
+				id: int13
+		#		text: 'Efrain Astudillo'
+				background_normal: 'images/layout/botonesIntegrantes/btn_eastudillo.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_eastudilloDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(25)
+
+			Button:
+				id: int21
+			#	text: 'Carlos Avilés'
+				background_normal: 'images/layout/botonesIntegrantes/btn_caviles.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_cavilesDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(14)
+
+			Button:
+				id: int24
+			#	text: 'Christopher Cáceres'
+				background_normal: 'images/layout/botonesIntegrantes/btn_ccaceres.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_ccaceresDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(17)
+
+			Button:
+				id: int17
+		#		text: 'Gustavo Cali'
+				background_normal: 'images/layout/botonesIntegrantes/btn_gcali.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_gcaliDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(9)
+
+			Button:
+				id: int29
+		#		text: 'David Chang'
+				background_normal: 'images/layout/botonesIntegrantes/btn_dchang.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_dchangDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(4)
+
+			Button:
+				id: int20
+		#		text: 'Meiying Cheung'
+				background_normal: 'images/layout/botonesIntegrantes/btn_mcheung.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_mcheungDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(13)
+
+			Button:
+				id: int26
+		#		text: 'Mario Coronel'
+				background_normal: 'images/layout/botonesIntegrantes/btn_mcoronel.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_mcoronelDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(28)
+
+			Button:
+				id: int11
+		#		text: 'Vanessa Echeverria'
+				background_normal: 'images/layout/botonesIntegrantes/btn_vecheverria.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_vecheverriaDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(22)
+
+			Button:
+				id: int27
+	#			text: 'Jorge Galarza'
+				background_normal: 'images/layout/botonesIntegrantes/btn_jgalarza.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_jgalarzaDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(29)
+
+			Button:
+				id: int12
+		#		text: 'Bruno Guaman '
+				background_normal: 'images/layout/botonesIntegrantes/btn_bguaman.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_bguamanDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(24)
+
+			
+
+			Button:
+				id: int19
+			#	text: 'David Jurado'
+				background_normal: 'images/layout/botonesIntegrantes/btn_djurado.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_djuradoDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(12)
+
+			Button:
+				id: int9
+		#		text: 'Gonzalo Luzardo Lider de Proyecto'
+				background_normal: 'images/layout/botonesIntegrantes/btn_gluzardo.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_gluzardoDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(20)
+
+			Button:
+				id: int14
+		#		text: 'Monica Mora'
+				background_normal: 'images/layout/botonesIntegrantes/btn_mmora.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_mmoraDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(26)
+			Button:
+				id: int28
+	#			text: 'José Muñoz'
+				background_normal: 'images/layout/botonesIntegrantes/btn_jmunoz.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_jmunozDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(30)
+
+			
+
+			Button:
+				id: int18
+		#		text: 'Jhony Pincay'
+				background_normal: 'images/layout/botonesIntegrantes/btn_jpincay.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_jpincayDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(10)
+			Button:
+				id: int23
+			#	text: 'Andrés Prieto'
+				background_normal: 'images/layout/botonesIntegrantes/btn_aprieto.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_aprietoDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(16)
+			Button:
+				id: int16
+	#			text: 'Félix Rivas'
+				background_normal: 'images/layout/botonesIntegrantes/btn_frivas.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_frivasDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(8)
+			Button:
+				id: int22
+			#	text: 'Carla Salvatierra'
+				background_normal: 'images/layout/botonesIntegrantes/btn_csalvatierra.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_csalvatierraDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(15)
+
+			Button:
+				id: int10
+		#		text: 'Javier Tibau'
+				background_normal: 'images/layout/botonesIntegrantes/btn_jtibau.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_jtibauDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(21)
+
+			Button:
+				id: int8
+		#		text: 'Andrés Vargas Ayudante de Investigación'
+				background_normal: 'images/layout/botonesIntegrantes/btn_avargas.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_avargasDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(23)
+
+			Button:
+				id: int15
+#				text: 'Alejandro Vinueza'
+				background_normal: 'images/layout/botonesIntegrantes/btn_avinueza.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_avinuezaDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:77
+				width:224
+				on_release: root.do_info(7)
+
+<Integrantesui_cicyt>:
+	lista: gridlayout
+	
+	canvas:
+		Rectangle:
+			source: 'images/layout/background.jpg'
+			pos: self.pos
+			size: self.size
+	
+	
+	BoxLayout:
+		orientation: 'vertical'
+		size: (1024,768)
+		BoxLayout:
+			orientation: 'horizontal'
+			padding: 20
+			spacing: 10
+			size_hint: (1, .1145)
+			
+			canvas:
+				Rectangle:
+					source: 'images/layout/headerCicyt.png'
+					pos: self.pos
+					size: self.size
+			Label:
+				text: ''
+				font_size: 20
+				size_hint: (.6, 1)
+			Button:
+				id: info85
+				text: ''
+				font_size: 12
+				background_normal: 'images/layout/atras.png'
+				background_down: 'images/layout/atrasDown.png'
+				size_hint: (0.2,1.1)
+				on_release:root.do_return()
+				
+			Button:
+				id: info86
+				text: ''
+				font_size: 12
+				background_normal: 'images/layout/info.png'
+				background_down: 'images/layout/infoDown.png'
+				size_hint: (0.2,1.1)
+				on_release:root.information()
+
+			
+		GridLayout:
+			id: gridlayout
+            cols: 3
+            spacing: 10
+            padding: 20
+            size_hint: (1, .8855)
+			
+				
+			
+				
+			Button:
+				id: int30
+		#		text: 'Jorge Calderón'
+				background_normal: 'images/layout/botonesIntegrantes/btn_jcalderon.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_jcalderonDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:110
+				width:320
+				on_release: root.do_info(31)
+				
+			Button:
+				id: int31
+		#		text: 'Paúl Herrera'
+				background_normal: 'images/layout/botonesIntegrantes/btn_pherrera.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_pherreraDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:110
+				width:320
+				on_release: root.do_info(32)
+				
+			Button:
+				id: int32
+		#		text: 'Clara Segarra'
+				background_normal: 'images/layout/botonesIntegrantes/btn_csegarra.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_csegarraDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:110
+				width:320
+				on_release: root.do_info(33)
+				
+		#	Button:
+				id: int33
+		#		text: 'Catalina Vera Moscoso'
+		#		background_normal: 'images/layout/botonesIntegrantes/btn_cvera.png'
+			#	background_down: 'images/layout/botonesIntegrantes/btn_cveraDown.png'
+		#		font_size: 50
+		#		size_hint: (None,None)
+		#		height:110
+		#		width:320
+		#		on_release: root.do_info(34)
+				
+			Button:
+				id: int34
+			#	text: 'Edmundo Aguilar'
+				background_normal: 'images/layout/botonesIntegrantes/btn_eaguilar.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_eaguilarDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:110
+				width:320
+				on_release: root.do_info(35)
+				
+			Button:
+				id: int35
+		#		text: 'Johanna Ponce'
+				background_normal: 'images/layout/botonesIntegrantes/btn_jponce.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_jponceDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:110
+				width:320
+				on_release: root.do_info(36)
+				
+			Button:
+				id: int36
+			#	text: 'César Espín'
+				background_normal: 'images/layout/botonesIntegrantes/btn_cespin.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_cespinDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:110
+				width:320
+				on_release: root.do_info(37)
+				
+			Button:
+				id: int37
+		#		text: 'Galo Merino'
+				background_normal: 'images/layout/botonesIntegrantes/btn_gmerino.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_gmerinoDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:110
+				width:320
+				on_release: root.do_info(38)
+				
+			Button:
+				id: int38
+		#		text: 'Samia Tacle'
+				background_normal: 'images/layout/botonesIntegrantes/btn_stacle.png'
+				background_down: 'images/layout/botonesIntegrantes/btn_stacleDown.png'
+				font_size: 50
+				size_hint: (None,None)
+				height:110
+				width:320
+				on_release: root.do_info(39)
